@@ -29,7 +29,7 @@ public class EmployeesNewServlet extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("_tpken", request.getSession().getId());
+        request.setAttribute("_token", request.getSession().getId());
         request.setAttribute("employee", new Employee());
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/employees/new.jsp");
