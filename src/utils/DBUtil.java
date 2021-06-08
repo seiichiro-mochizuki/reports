@@ -1,4 +1,4 @@
-package utls;
+package utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -20,5 +20,3 @@ public class DBUtil {
         return emf;
     }
 }
-
-

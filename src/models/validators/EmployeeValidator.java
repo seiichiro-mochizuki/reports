@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import models.Employee;
-import utls.DBUtil;
+import utils.DBUtil;
 
 public class EmployeeValidator {
     public static List<String> validate(Employee e, Boolean codeDuplicateCheckFlag, Boolean passwordCheckFlag){
@@ -59,4 +59,3 @@ public class EmployeeValidator {
         return "";
     }
 }
-
