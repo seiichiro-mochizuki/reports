@@ -44,6 +44,10 @@ public class ReportsUpdateServlet extends HttpServlet {
             r.setReport_date(Date.valueOf(request.getParameter("report_date")));
             r.setTitle(request.getParameter("title"));
             r.setContent(request.getParameter("content"));
+            r.setCommuting_hour(request.getParameter("commuting_hour"));
+            r.setCommuting_minute(request.getParameter("commuting_minute"));
+            r.setLeaving_hour(request.getParameter("leaving_hour"));
+            r.setLeaving_minute(request.getParameter("leaving_minute"));
             r.setUpdated_at(new Timestamp(System.currentTimeMillis()));
 
             List<String> errors = ReportValidator.validate(r);
@@ -53,6 +57,7 @@ public class ReportsUpdateServlet extends HttpServlet {
                 request.setAttribute("_token", request.getSession().getId());
                 request.setAttribute("report", r);
                 request.setAttribute("errors", errors);
+
 
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reports/edit.jsp");
                 rd.forward(request, response);

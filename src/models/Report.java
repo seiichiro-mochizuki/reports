@@ -61,6 +61,50 @@ public class Report {
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
 
+    @Column(name = "commuting_hour", length = 2, nullable = false)
+    private String commuting_hour;
+
+    @Column(name = "commuting_minute", length = 2, nullable = false)
+    private String commuting_minute;
+
+    @Column(name = "leaving_hour", length = 2, nullable = false)
+    private String leaving_hour;
+
+    @Column(name = "leaving_minute", length = 2, nullable = false)
+    private String leaving_minute;
+
+    public String getCommuting_hour() {
+        return commuting_hour;
+    }
+
+    public void setCommuting_hour(String commuting_hour) {
+        this.commuting_hour = commuting_hour;
+    }
+
+    public String getCommuting_minute() {
+        return commuting_minute;
+    }
+
+    public void setCommuting_minute(String commuting_minute) {
+        this.commuting_minute = commuting_minute;
+    }
+
+    public String getLeaving_hour() {
+        return leaving_hour;
+    }
+
+    public void setLeaving_hour(String leaving_hour) {
+        this.leaving_hour = leaving_hour;
+    }
+
+    public String getLeaving_minute() {
+        return leaving_minute;
+    }
+
+    public void setLeaving_minute(String leaving_minute) {
+        this.leaving_minute = leaving_minute;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -117,6 +161,9 @@ public class Report {
         this.updated_at = updated_at;
     }
 
-}
 
+
+
+
+}
 

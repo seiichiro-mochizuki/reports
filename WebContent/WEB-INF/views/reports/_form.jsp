@@ -26,5 +26,19 @@
 <textarea name="content" rows="10" cols="50">${report.content}</textarea>
 <br /><br />
 
+<label for="commuting_hour">出勤時刻</label>
+<input type="text" style="width:50px;" name="commuting_hour" value="${report.commuting_hour }" /> :
+
+<label for="commuting_minute"></label>
+<input type="text" style="width:50px;" name="commuting_minute" value="${report.commuting_minute }" />
+<br /><br />
+
+<label for="leaving_hour">退勤時刻</label>
+<input type="text" style="width:50px;" name="leaving_hour" value="${report.leaving_hour }" /> :
+
+<label for="leaving_minute"></label>
+<input type="text" style="width:50px;" name="leaving_minute" value="${report.leaving_minute }" />
+<br /><br />
+
 <input type="hidden" name="_token" value="${_token}" />
 <button type="submit">投稿</button>

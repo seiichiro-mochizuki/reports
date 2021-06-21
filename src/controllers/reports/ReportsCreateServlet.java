@@ -54,6 +54,10 @@ public class ReportsCreateServlet extends HttpServlet {
 
             r.setTitle(request.getParameter("title"));
             r.setContent(request.getParameter("content"));
+            r.setCommuting_hour(request.getParameter("commuting_hour"));
+            r.setCommuting_minute(request.getParameter("commuting_minute"));
+            r.setLeaving_hour(request.getParameter("leaving_hour"));
+            r.setLeaving_minute(request.getParameter("leaving_minute"));
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             r.setCreated_at(currentTime);
